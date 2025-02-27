@@ -61,8 +61,8 @@ http://localhost:5000
 3. View the temperature, humidity, and weather conditions displayed below.
 
 ## Screenshot
-![Weather Dashboard](homepage.png)
-![Weather Dashboard](result-img.png)
+![Weather Dashboard](static/images/homepage.png)
+![Weather Dashboard](static/images/result-img.png)
 
 ## Future Enhancements
 - Add weather forecast for the next 5 days.
