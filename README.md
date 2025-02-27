@@ -28,7 +28,9 @@ The application provides an interactive and user-friendly interface with a trans
 ├── templates
 │   └── index.html        # HTML Template for UI
 └── static
-    └── style.css         # CSS File for Styling
+    ├── style.css      # CSS File for Styling
+    └── images
+        └── backgroung.jpg  # Backgroung Image   
 ```
 
 ## Installation and Setup
