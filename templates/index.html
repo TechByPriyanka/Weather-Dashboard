@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: url("{{ url_for('static', filename='images/bg.jpeg') }}") no-repeat center center fixed;
+            background-size: cover;
+            text-align: center; 
+            padding: 50px; 
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0px 4px 6px rgba(4, 1, 1, 0.3);
+        }
+        textarea { 
+            width: 80%; 
+            height: 100px; 
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button { 
+            padding: 10px 20px; 
+            margin-top: 10px; 
+            border: none; 
+            background-color: #007bff; /* Green button */
+            color: white; 
+            font-size: 16px; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker green on hover */
+        }
+        .result { 
+            margin-top: 20px; 
+            font-size: 16px; 
+            color: white;
+
+        }
+        .main-heading {
+            text-align: center;
+            font-size: 3.0rem;
+            font-weight: bold;
+            margin-top: 20px; 
+            margin-bottom: 15px;
+            color: black; 
+        }
+
+    </style>
+</head>
+<body>
+  <h1 class="main-heading">Weather Dashboard 🌦️</h1>  
+    <div class="container">
+        <h1 style="font-weight: bold; color: white;">Weather in your city..</h1>
+        <form method="POST">
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+        </form>
+
+        {% if weather %}
+            {% if weather.error %}
+                <p style="color: red; font-size: 25px; font-weight: bold;">{{ weather.error }}</p>
+            {% else %}
+                <h2 style="font-weight: bold; color: white;">Weather in {{ weather.city }}📍</h2>
+               <div class="result"> 
+                  <p><strong>Temperature:</strong> {{ weather.temperature }}°C🌡️</p>
+                  <p><strong>Humidity:</strong> {{ weather.humidity }}%💧</p>
+                  <p><strong>Condition:</strong> {{ weather.description }}⛅</p>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
