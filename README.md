@@ -28,7 +28,7 @@ The application provides an interactive and user-friendly interface with a trans
 ├── templates
 │   └── index.html        # HTML Template for UI
 └── static
-    ├── style.css      # CSS File for Styling
+    ├── style.css         # CSS File for Styling
     └── images
         └── backgroung.jpg  # Backgroung Image   
 ```
@@ -36,7 +36,7 @@ The application provides an interactive and user-friendly interface with a trans
 ## Installation and Setup
 1. Clone the repository:
 ```bash
- git clone https://github.com/your-repo/weather-dashboard.git
+ git clone https://github.com/your-repo/Weather-Dashboard.git
 ```
 2. Install required dependencies:
 ```bash
